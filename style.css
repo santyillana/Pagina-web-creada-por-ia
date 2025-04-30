@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #b00000, #2b0000);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.eslogan {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: #8b0000;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.seccion {
+    padding: 3rem 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.producto-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
