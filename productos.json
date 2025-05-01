@@ -1,0 +1,12 @@
+[
+    {
+        "nombre": "Galletas naturales",
+        "descripcion": "Hechas con avena, manzana y amor.",
+        "imagen": "galletas.jpg"
+    },
+    {
+        "nombre": "Colágeno masticable",
+        "descripcion": "Ideal para sus huesos y articulaciones.",
+        "imagen": "colageno.jpg"
+    }
+]
