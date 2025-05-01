@@ -6,10 +6,13 @@ fetch('productos.json')
             const div = document.createElement('div');
             div.className = 'producto';
             div.innerHTML = `
-                <img src="images/${producto.imagen}" alt="${producto.nombre}" style="width:100%">
+                <img src="images/${producto.imagen}" alt="${producto.nombre}">
                 <h3>${producto.nombre}</h3>
                 <p>${producto.descripcion}</p>
             `;
             container.appendChild(div);
         });
+    })
+    .catch(error => {
+        console.error("Error cargando los productos:", error);
     });
