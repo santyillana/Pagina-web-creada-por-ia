@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "Valentina R.",
+    "perro": "Luna",
+    "foto": "assets/clientes/luna.webp",
+    "testimonio": "Luna ama las galletas de calabaza de Combopitt. ¡Desde que las probó, no quiere otras!"
+  },
+  {
+    "nombre": "Carlos G.",
+    "perro": "Roco",
+    "foto": "assets/clientes/roco.webp",
+    "testimonio": "Probamos el colágeno natural y ha mejorado muchísimo su movilidad. ¡Recomendado 100%!"
+  },
+  {
+    "nombre": "Andrea M.",
+    "perro": "Milo",
+    "foto": "assets/clientes/milo.webp",
+    "testimonio": "La torta personalizada para su cumpleaños fue increíble. ¡Gracias por tanto amor!"
+  },
+  {
+    "nombre": "Pedro y Luisa",
+    "perro": "Nina",
+    "foto": "assets/clientes/nina.webp",
+    "testimonio": "Nos encanta participar en las actividades. Nina se socializa y se divierte un montón."
+  }
+]
