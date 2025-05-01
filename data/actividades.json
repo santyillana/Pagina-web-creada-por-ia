@@ -1,0 +1,30 @@
+[
+  {
+    "titulo": "Paseo Perruno en el Parque Central",
+    "fecha": "2025-04-15",
+    "lugar": "Parque Central, Ciudad Canina",
+    "imagen": "assets/actividades/paseo-parque.webp",
+    "descripcion": "Una jornada de juegos, caminatas y premios para todos los lomitos. ¡Más de 30 perros participaron!"
+  },
+  {
+    "titulo": "Taller de Snacks Naturales",
+    "fecha": "2025-03-08",
+    "lugar": "Tienda Combopitt - Sede Norte",
+    "imagen": "assets/actividades/taller-snacks.webp",
+    "descripcion": "Aprendimos a preparar galletas y helados saludables para perros. Actividad ideal para dueños comprometidos."
+  },
+  {
+    "titulo": "Adopta y Celebra",
+    "fecha": "2025-02-14",
+    "lugar": "Refugio CanAmor",
+    "imagen": "assets/actividades/adopta-celebra.webp",
+    "descripcion": "Evento solidario donde varios perritos encontraron hogar. Combopitt regaló muestras y mucho amor."
+  },
+  {
+    "titulo": "Cumpleaños Perruno - Max",
+    "fecha": "2025-01-20",
+    "lugar": "Casa Max - Jardines del Este",
+    "imagen": "assets/actividades/cumple-max.webp",
+    "descripcion": "Fiesta temática con torta, globos, disfraces y una piñata llena de premios. ¡Guau!"
+  }
+]
