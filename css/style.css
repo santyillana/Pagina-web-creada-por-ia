@@ -1,0 +1,152 @@
+/* ===============================
+   COMBOPITT – style.css
+   Paleta: rojo vivo (#E50914), negro (#000), blanco (#fff)
+================================ */
+
+/* 1. Variables de color (modo claro por defecto) */
+:root {
+  --color-rojo: #E50914;
+  --color-negro: #000000;
+  --color-blanco: #ffffff;
+  --color-fondo: #ffffff;
+  --color-texto: #000000;
+  --color-secundario: #f9f9f9;
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --borde-redondeado: 1.25rem;
+}
+
+/* 2. Reset y tipografía base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* 3. Contenedores */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* 4. Títulos */
+h1, h2, h3 {
+  font-weight: 800;
+  color: var(--color-rojo);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* 5. Botones */
+.btn {
+  display: inline-block;
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--borde-redondeado);
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #b0060f;
+  transform: scale(1.05);
+}
+
+/* 6. Tarjetas */
+.card {
+  background-color: var(--color-blanco);
+  border-radius: var(--borde-redondeado);
+  box-shadow: var(--sombra-suave);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* 7. Encabezado */
+header {
+  background-color: var(--color-negro);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header img {
+  max-width: 150px;
+}
+
+/* 8. Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-rojo);
+}
+
+/* 9. Footer */
+footer {
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* 10. Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
