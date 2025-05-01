@@ -1,23 +1,18 @@
-// Scroll reveal para cada sección
-document.addEventListener("DOMContentLoaded", () => {
-  const secciones = document.querySelectorAll("section");
-  const options = {
-    threshold: 0.1
-  };
+// Animaciones de scroll
+const secciones = document.querySelectorAll('.hidden');
 
-  const reveal = (entry, observer) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
+const mostrarSeccion = () => {
+  const scrollTop = window.scrollY;
+  const alturaVentana = window.innerHeight;
+
+  secciones.forEach(sec => {
+    const top = sec.offsetTop;
+
+    if (scrollTop + alturaVentana > top + 100) {
+      sec.classList.add('visible');
     }
-  };
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(e => reveal(e, obs));
-  }, options);
-
-  secciones.forEach(section => {
-    section.classList.add("hidden");
-    observer.observe(section);
   });
-});
+};
+
+window.addEventListener('scroll', mostrarSeccion);
+document.addEventListener('DOMContentLoaded', mostrarSeccion);
