@@ -1,153 +1,98 @@
-/* ===============================
-   COMBOPITT – style.css
-   Paleta: rojo vivo (#E50914), negro (#000), blanco (#fff)
-================================ */
-
-/* 1. Variables de color (modo claro por defecto) */
-:root {
-  --color-rojo: #E50914;
-  --color-negro: #000000;
-  --color-blanco: #ffffff;
-  --color-fondo: #ffffff;
-  --color-texto: #000000;
-  --color-secundario: #f9f9f9;
-  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --borde-redondeado: 1.25rem;
-}
-
-/* 2. Reset y tipografía base */
+/* Estilos base */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #ff0000, #4b0000);
-  color: white;
   font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #e00000, #4b0000);
+  color: #ffffff;
+  min-height: 100vh;
 }
 
-
-/* 3. Contenedores */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem 0;
+/* Encabezado */
+header {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #fff;
 }
 
-/* 4. Títulos */
-h1, h2, h3 {
-  font-weight: 800;
-  color: var(--color-rojo);
+.logo {
+  width: 80px;
+  height: auto;
   margin-bottom: 1rem;
 }
 
-h1 {
+header h1 {
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-h2 {
-  font-size: 2rem;
+header p {
+  font-size: 1.1rem;
+  color: #f1f1f1;
 }
 
-h3 {
-  font-size: 1.5rem;
-}
-
-/* 5. Botones */
-.btn {
-  display: inline-block;
-  background-color: var(--color-rojo);
-  color: var(--color-blanco);
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: var(--borde-redondeado);
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #b0060f;
-  transform: scale(1.05);
-}
-
-/* 6. Tarjetas */
-.card {
-  background-color: var(--color-blanco);
-  border-radius: var(--borde-redondeado);
-  box-shadow: var(--sombra-suave);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
-/* 7. Encabezado */
-header {
-  background-color: var(--color-negro);
-  padding: 1rem 0;
-  text-align: center;
-}
-
-header img {
-  max-width: 150px;
-}
-
-/* 8. Navegación */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: var(--color-blanco);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--color-rojo);
-}
-
-/* 9. Footer */
-footer {
-  background-color: var(--color-negro);
-  color: var(--color-blanco);
+/* Sección productos */
+main {
   padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
 }
 
-/* 10. Responsive */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
+#productos {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
+#productos h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
 
-  nav ul {
-    flex-direction: column;
-  }
+/* Grid de productos */
+.productos-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.producto {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+  border-top: 1px solid #fff;
 }
