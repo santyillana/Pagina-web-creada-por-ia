@@ -1,0 +1,68 @@
+/* =====================================
+   🌗 BOTÓN CONMUTADOR MODO OSCURO/CLARO
+   Estilo: Combopitt (rojo, negro, blanco)
+===================================== */
+
+.toggle-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  background-color: #e63946; /* Rojo vivo */
+  border-radius: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo cuando está en modo oscuro */
+.toggle-switch.dark {
+  background-color: #111111; /* Fondo negro */
+}
+
+.toggle-switch.dark::before {
+  transform: translateX(32px);
+}
+
+/* Iconos dentro del botón */
+.toggle-switch .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: white;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.toggle-switch .icon.sun {
+  left: 8px;
+}
+
+.toggle-switch .icon.moon {
+  right: 8px;
+}
+
+/* Transiciones suaves en la página */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
