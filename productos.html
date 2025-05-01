@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de snacks naturales para perros – Combopitt" />
+  <meta name="keywords" content="snacks, perros, productos naturales, catálogo, combopitt" />
+  <meta property="og:title" content="Catálogo – Combopitt" />
+  <meta property="og:description" content="Explora nuestra variedad de snacks naturales para perros felices y saludables." />
+  <meta property="og:image" content="assets/logo.webp" />
+  <meta property="og:url" content="https://tusitio.com/productos.html" />
+  <title>Productos – Combopitt</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/darkmode-toggle.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <img src="assets/logo.webp" alt="Logo Combopitt" class="logo" />
+    <h1 class="brand-name">Nuestros Productos</h1>
+    <button id="modo-oscuro-toggle" aria-label="Cambiar modo claro/oscuro">🌓</button>
+  </header>
+
+  <section class="productos-container">
+    <h2>Catálogo Natural para Perritos Felices 🐶</h2>
+
+    <!-- Filtros -->
+    <div class="filtros">
+      <label for="etiquetaSelect">Filtrar por etiqueta:</label>
+      <select id="etiquetaSelect">
+        <option value="todos">Todos</option>
+        <!-- Opciones dinámicas desde JS -->
+      </select>
+    </div>
+
+    <!-- Grid de productos -->
+    <div id="productosGrid" class="grid-productos">
+      <!-- Se insertarán tarjetas desde cargarProductos.js -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Combopitt. Todos los derechos reservados.</p>
+    <a href="contacto.html">Contacto</a>
+  </footer>
+
+  <script src="js/modoOscuro.js"></script>
+  <script src="js/cargarProductos.js"></script>
+</body>
+</html>
