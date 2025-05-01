@@ -3,66 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Combopitt – Snacks naturales para perros felices. Descubre nuestros productos, actividades y misión perruna." />
-  <meta name="keywords" content="snacks, perros, naturales, actividades, marca, combopitt" />
-  <meta name="author" content="Combopitt" />
-  <meta property="og:title" content="Combopitt – Snacks naturales para perros" />
-  <meta property="og:description" content="Conoce la misión perruna de Combopitt y explora productos naturales para tu peludo." />
-  <meta property="og:image" content="assets/logo.webp" />
-  <meta property="og:url" content="https://tusitio.com" />
-  <title>Combopitt – Snacks naturales para perros</title>
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/darkmode-toggle.css" />
+  <meta name="description" content="Combopitt - Snacks naturales y saludables para perros" />
+  <meta property="og:title" content="Combopitt" />
+  <meta property="og:description" content="Snacks naturales y saludables para perros" />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:url" content="https://combopitt.netlify.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Combopitt | Snacks Naturales para Perros</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Splash Screen -->
-  <div id="splash">
-    <img src="assets/logo.webp" alt="Logo Combopitt" class="splash-logo" />
-  </div>
-
-  <!-- Encabezado principal -->
-  <header class="main-header">
-    <img src="assets/logo.webp" alt="Logo Combopitt" class="logo" />
-    <h1 class="brand-name">Combo<span class="highlight">PITT</span></h1>
-    <button id="modo-oscuro-toggle" aria-label="Cambiar modo claro/oscuro">🌓</button>
+  <header>
+    <div class="container header-content">
+      <img src="assets/logo.png" alt="Logo Combopitt" class="logo" />
+      <h1>Combopitt</h1>
+      <p>Snacks naturales y saludables para tu mejor amigo</p>
+    </div>
   </header>
 
-  <!-- Intro -->
-  <section class="hero">
-    <h2>Snacks naturales que mueven colitas 🐶</h2>
-    <p>Explora nuestros productos, actividades y filosofía perruna.</p>
-    <a href="productos.html" class="btn-cta">Ver Productos</a>
-  </section>
+  <main>
+    <section id="productos">
+      <h2>Productos</h2>
+      <div id="productos-container" class="productos-grid">
+        <!-- Productos cargados dinámicamente desde productos.json -->
+      </div>
+    </section>
+  </main>
 
-  <!-- Secciones previas -->
-  <section class="secciones-preview">
-    <div class="card" data-aos="fade-up">
-      <h3>🐾 Actividades</h3>
-      <p>Paseos, juegos y eventos perrunos en comunidad.</p>
-      <a href="actividades.html" class="card-link">Ver más</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h3>📖 Nuestra Historia</h3>
-      <p>Una marca nacida del amor y respeto por los perros.</p>
-      <a href="nosotros.html" class="card-link">Conócenos</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h3>❤️ Misión Perruna</h3>
-      <p>Creemos que todos los perros merecen una vida feliz y saludable.</p>
-      <a href="mision.html" class="card-link">Leer más</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
+  <footer>
     <p>&copy; 2025 Combopitt. Todos los derechos reservados.</p>
-    <a href="contacto.html">Contacto</a>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/modoOscuro.js"></script>
-  <script src="js/animaciones.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+    // Cargar productos desde productos.json
+    fetch('productos.json')
+      .then(response => response.json())
+      .then(data => {
+        const contenedor = document.getElementById('productos-container');
+        data.productos.forEach(producto => {
+          const div = document.createElement('div');
+          div.className = 'producto';
+          div.innerHTML = `
+            <img src="${producto.img}" alt="${producto.nombre}" />
+            <h3>${producto.nombre}</h3>
+            <p>${producto.descripcion}</p>
+          `;
+          contenedor.appendChild(div);
+        });
+      })
+      .catch(error => {
+        console.error('Error al cargar productos:', error);
+        const contenedor = document.getElementById('productos-container');
+        contenedor.innerHTML = '<p>No se pudieron cargar los productos.</p>';
+      });
+  </script>
 </body>
 </html>
