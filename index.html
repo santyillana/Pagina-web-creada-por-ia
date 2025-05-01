@@ -5,78 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Combopitt</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
+  <header class="hero">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <img src="assets/letras.png" alt="Letras Combopitt" class="letras" />
+    <h1>Snacks naturales para perros felices</h1>
+    <a href="#productos" class="btn">Conócenos</a>
+  </header>
 
-<header class="hero">
-  <div class="logo-area">
-    <img src="assets/logo.png" alt="Logo Combopitt" class="logo-animada" />
-    <img src="assets/letras.png" alt="Letras Combopitt" class="letras-animadas" />
-  </div>
-  <h1 class="slogan">Snacks naturales para perros felices</h1>
-  <a href="#productos" class="btn-hero">Conócenos</a>
-</header>
-
-<nav class="navegacion">
-  <a href="#productos">Productos</a>
-  <a href="#felicidad">Galería</a>
-  <a href="#mision">Misión</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-<section id="productos" class="productos">
-  <h2>Productos Destacados</h2>
-  <div class="galeria">
-    <div class="card producto">
-      <img src="assets/galleta.png" alt="Galleta"/>
-      <h3>Galletas</h3>
-      <p>Deliciosas y crujientes galletas naturales para perros de todos los tamaños.</p>
+  <section id="productos" class="productos">
+    <h2>Productos Destacados</h2>
+    <div class="galeria">
+      <div class="card">
+        <img src="assets/galleta.png" alt="Galleta"/>
+        <h3>Galletas</h3>
+        <p>Deliciosas y crujientes galletas naturales para perros de todos los tamaños.</p>
+      </div>
+      <div class="card">
+        <img src="assets/patas.png" alt="Patas"/>
+        <h3>Patas Deshidratadas</h3>
+        <p>Ricas en colágeno, perfectas para fortalecer las articulaciones.</p>
+      </div>
+      <div class="card">
+        <img src="assets/cuellos.png" alt="Cuellos"/>
+        <h3>Cuellos Deshidratados</h3>
+        <p>Snack proteico ideal para entretenimiento saludable.</p>
+      </div>
     </div>
-    <div class="card producto">
-      <img src="assets/patas.png" alt="Patas"/>
-      <h3>Patas Deshidratadas</h3>
-      <p>Ricas en colágeno, perfectas para fortalecer las articulaciones.</p>
+  </section>
+
+  <section class="clientes">
+    <h2>Clientes Felices</h2>
+    <div class="clientes-galeria">
+      <div class="cliente-card">
+        <img src="assets/perro1.png" alt="Cliente 1"/>
+        <p>“Mi perro ama las galletas de Combopitt. ¡No puede esperar a la hora del snack!”</p>
+      </div>
+      <div class="cliente-card">
+        <img src="assets/perro2.png" alt="Cliente 2"/>
+        <p>“Las patas deshidratadas han mejorado la movilidad de mi perro. ¡Gracias!”</p>
+      </div>
+      <div class="cliente-card">
+        <img src="assets/perro3.png" alt="Cliente 3"/>
+        <p>“Los cuellos deshidratados mantienen a mi perro entretenido por horas.”</p>
+      </div>
+      <div class="cliente-card">
+        <img src="assets/perro4.png" alt="Cliente 4"/>
+        <p>“Productos naturales y deliciosos. ¡Mi perro está más feliz que nunca!”</p>
+      </div>
+      <div class="cliente-card">
+        <img src="assets/perro5.png" alt="Cliente 5"/>
+        <p>“Combopitt ha transformado la hora del snack en un momento especial.”</p>
+      </div>
     </div>
-    <div class="card producto">
-      <img src="assets/cuellos.png" alt="Cuellos"/>
-      <h3>Cuellos Deshidratados</h3>
-      <p>Snack proteico ideal para entretenimiento saludable.</p>
+  </section>
+
+  <section class="nosotros">
+    <h2>Nuestra Misión</h2>
+    <p>En Combopitt creemos que la alimentación natural es clave para la salud de nuestros compañeros de cuatro patas. Nos dedicamos a ofrecer productos de calidad, sin aditivos, que no solo nutren sino que también llenan de alegría cada mordida.</p>
+  </section>
+
+  <section class="contacto">
+    <h2>Contáctanos</h2>
+    <form name="contacto" method="POST" data-netlify="true">
+      <input type="text" name="nombre" placeholder="Nombre" required />
+      <input type="email" name="email" placeholder="Correo" required />
+      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="sociales">
+      <a href="https://wa.me/573108767965" target="_blank">WhatsApp</a> |
+      <a href="https://www.instagram.com/combopitt" target="_blank">Instagram</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="felicidad" class="felicidad">
-  <h2>Perros Felices, Dueños Tranquilos</h2>
-  <div class="slider">
-    <img src="assets/perro1.png" alt="Perro feliz"/>
-    <img src="assets/perro2.png" alt="Perro feliz"/>
-    <img src="assets/perro3.png" alt="Perro feliz"/>
-    <img src="assets/perro4.png" alt="Perro feliz"/>
-    <img src="assets/perro5.png" alt="Perro feliz"/>
-  </div>
-</section>
-
-<section id="mision" class="nosotros">
-  <h2>Nuestra Misión</h2>
-  <p>
-    En Combopitt creemos que la alimentación natural es clave para la salud de nuestros compañeros de cuatro patas. Nos dedicamos a ofrecer productos de calidad, sin aditivos, que no solo nutren sino que también llenan de alegría cada mordida.
-  </p>
-</section>
-
-<section id="contacto" class="contacto">
-  <h2>Contáctanos</h2>
-  <form>
-    <input type="text" placeholder="Nombre" required />
-    <input type="email" placeholder="Correo" required />
-    <textarea placeholder="Mensaje" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-  <div class="sociales">
-    <a href="#">📷 Instagram</a>
-    <a href="#">💬 WhatsApp</a>
-  </div>
-</section>
-
+  <script src="script.js"></script>
 </body>
 </html>
