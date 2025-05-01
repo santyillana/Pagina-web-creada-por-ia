@@ -1,15 +1,23 @@
-fetch('productos.json')
-    .then(res => res.json())
-    .then(data => {
-        const container = document.getElementById('productos-lista');
-        data.forEach(producto => {
-            const div = document.createElement('div');
-            div.className = 'producto';
-            div.innerHTML = `
-                <img src="images/${producto.imagen}" alt="${producto.nombre}" style="width:100%">
-                <h3>${producto.nombre}</h3>
-                <p>${producto.descripcion}</p>
-            `;
-            container.appendChild(div);
-        });
-    });
+// Scroll reveal para cada sección
+document.addEventListener("DOMContentLoaded", () => {
+  const secciones = document.querySelectorAll("section");
+  const options = {
+    threshold: 0.1
+  };
+
+  const reveal = (entry, observer) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => reveal(e, obs));
+  }, options);
+
+  secciones.forEach(section => {
+    section.classList.add("hidden");
+    observer.observe(section);
+  });
+});
