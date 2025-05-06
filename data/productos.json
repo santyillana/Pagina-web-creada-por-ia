@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Collar Rojo Clásico",
+    "precio": "$10.000",
+    "imagen": "https://via.placeholder.com/150?text=Collar+Rojo"
+  },
+  {
+    "nombre": "Juguete Masticable",
+    "precio": "$8.000",
+    "imagen": "https://via.placeholder.com/150?text=Juguete"
+  },
+  {
+    "nombre": "Camiseta Perruna PITT",
+    "precio": "$15.000",
+    "imagen": "https://via.placeholder.com/150?text=Camiseta"
+  }
+]
